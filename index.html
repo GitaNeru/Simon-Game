@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Gita</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+  <head>    
+    <title>Simon Game</title>            
+
+  </head>
+
+  <body>
+ 
+    <div id="box">
+
+<div class="instructions">
+
+  <p class="rules">Rules to play the game:<br><span class="rulesList">1) Start the Game.<br>2) Reproduce the series of button presses the game generates.<br>3) If you complete (5!) rounds, you win!<br>(Strict Mode only gives you one change to complete each round.)</span></p>
+
+</div>
+
+<div id="close"> <h1>X</h1> </div>
+
+</div>
+    
+<div class="simon">
+ 
+    <div class="controller">
+    
+      <p class="title" id="gameTitle">Simon<sup>®</sup></p>
+
+      <div class="counter"><h3 id="gameCounter">--</h3></div>
+
+      <button class="start" id="startGame">Start Game</button>
+
+    <div>
+
+      <label class="switch" id="switchLeft">
+        <input type="checkbox">
+        <div class="slider sliderLeft round"></div>
+      </label>
+
+      <label class="switch" id="switchRight">
+        <input type="checkbox">
+        <div class="slider sliderRight round"></div>
+      </label>
+          
+    </div>
+
+    <div class="labels">
+      <p><span class="onOff">On/Off</span><span class="strict">Strict Mode</span></p>
+    </div>
+
+  </div>
+
+  <div class="row">  
+    <div class="container green" id="green"></div>
+    <div class="container red" id="red"></div>
+  </div>
+
+  <div class="row">
+    <div class="container yellow" id="yellow"></div>
+    <div class="container blue" id="blue"></div>
+  </div>
+
+</div>
+ <div id="instructions"><h2>How to play</h2></div> 
+ 
+  </body>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

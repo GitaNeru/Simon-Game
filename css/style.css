@@ -1,0 +1,296 @@
+body {
+  background:#1898a3;
+  margin: 0;
+  padding: 0;
+}
+.controller {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgb(180,180,180);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 190px;
+  border: 20px solid rgb(40,40,40);
+  text-align: center;
+}
+.title {
+  font-size: 45px;  
+  margin-top: 22.5px;
+  margin-bottom: 0px;
+}
+sup {
+  font-size: 20px;
+}
+
+.counter {
+  width: 50px;
+  height: 35px;
+  background: rgb(50,50,50);
+  border-radius: 15px;
+  margin: -20px auto 5px auto;
+}
+#gameCounter {
+  padding-top: 5px;
+  color: white;
+}
+
+.start {
+  font-size: 25px;  
+  border-radius: 25px;
+  border: none;
+  background: rgb(225,225,225);
+  margin-top: 2.5px;
+  margin-bottom: 7.5px;
+  padding: 7.5px;
+}
+#startGame {
+    color: rgb(200,200,200);
+}
+.start:hover {
+  cursor: pointer;
+  background: rgb(114, 144, 255);
+}
+button:focus {
+  outline: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+#switchLeft {
+  margin-right: 5px;
+}
+#switchRight {
+  margin-left: 5px;
+}
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .sliderLeft {
+  background-color: #2196F3;
+}
+
+input:focus + .sliderLeft {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .sliderRight {
+  background-color: red;
+}
+
+input:focus + .sliderRight {
+  box-shadow: 0 0 1px red;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.labels {
+  margin-top: -15px;
+  padding: 0;
+  font-size: 13px;
+
+}
+.onOff {
+  margin-right: -5px;
+  margin-left: 10px;
+}
+.strict {
+  margin-left: 30px;
+}
+
+.simon {
+  margin-top: 50px;
+}
+.row {
+  width: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.container {
+  width: 250px;
+  height: 250px;
+}
+.green {
+    border-top: 25px solid rgb(40,40,40);
+    border-left: 25px solid rgb(40,40,40);
+    border-right: 12.5px solid rgb(40,40,40);
+    border-bottom: 12.5px solid rgb(40,40,40);  
+    border-top-left-radius: 100%;
+    background: rgb(0,168,69);
+}
+.red {
+    border-top: 25px solid rgb(40,40,40);
+    border-left: 12.5px solid rgb(40,40,40);
+    border-right: 25px solid rgb(40,40,40);
+    border-bottom: 12.5px solid rgb(40,40,40);  
+    border-top-right-radius: 100%;
+    background: rgb(161,11,15);
+}
+.blue {
+    border-top: 12.5px solid rgb(40,40,40);
+    border-left: 12.5px solid rgb(40,40,40);
+    border-right: 25px solid rgb(40,40,40);
+    border-bottom: 25px solid rgb(40,40,40);  
+    border-bottom-right-radius: 100%;
+    background: rgb(1,72,145);
+}
+.yellow {
+    border-top: 12.5px solid rgb(40,40,40);
+    border-left: 25px solid rgb(40,40,40);
+    border-right: 12.5px solid rgb(40,40,40);
+    border-bottom: 25px solid rgb(40,40,40);  
+    border-bottom-left-radius: 100%;
+    background: rgb(205,168,0);
+}
+
+#green:hover, #red:hover, #blue:hover, #yellow:hover {
+  cursor: pointer;
+}
+
+.clickedGreen {
+  background: rgb(53, 239, 85);
+}
+.clickedRed {
+  background: rgb(253, 35, 51);
+}
+.clickedYellow {
+  background: rgb(255, 230, 64);
+}
+.clickedBlue {
+  background: rgb(28, 138, 244);
+}
+
+.greenWinner {
+  background: rgb(255, 212, 37);
+}
+.redWinner {
+  background: rgb(255, 212, 37);
+}
+.yellowWinner {
+  background: rgb(255, 212, 37);
+}
+.blueWinner {
+  background: rgb(255, 212, 37);
+}
+
+.greenLoser {
+  background: rgb(131, 0, 21);
+}
+.redLoser {
+  background: rgb(131, 0, 21);
+}
+.yellowLoser {
+  background: rgb(131, 0, 21);
+}
+.blueLoser {
+  background: rgb(131, 0, 21);
+}
+
+
+#instructions {
+  position: fixed;
+  bottom: -5px;
+  left: 10px;
+  font-family: Avenir;
+  font-size: 15px;
+  text-decoration: underline;
+}
+#instructions:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#credits {
+  position: fixed;
+  bottom: -5px;
+  right: 10px;
+  font-family: Avenir;
+  font-size: 15px;
+}
+a, a:visited {
+  color: black;
+}
+a:hover {
+  color: white;
+}
+
+#box {
+  display: none;
+}
+
+.instructions {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 5;
+  background: rgba(5,5,5,.875);
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+}
+.rules {
+  color: rgb(235,235,235);1
+  font-family: Avenir;
+  font-size: 55px;
+}
+.rulesList {
+  font-size: 30px;
+}
+#close {
+  position: absolute;
+  color: rgb(235,235,235);
+  font-size: 35px;
+  z-index: 10;
+  top: -45px;
+  right: 10px;
+}
+#close:hover {
+  color: rgb(255, 113, 52);
+  cursor: pointer;
+}
